@@ -1,0 +1,18 @@
+Fitter Status : Successful - Mon May 05 02:00:06 2025
+Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+Revision Name : main
+Top-level Entity Name : fifo_sync
+Family : MAX 10
+Device : 10M08DAF484C8G
+Timing Models : Final
+Total logic elements : 45 / 8,064 ( < 1 % )
+    Total combinational functions : 33 / 8,064 ( < 1 % )
+    Dedicated logic registers : 33 / 8,064 ( < 1 % )
+Total registers : 33
+Total pins : 22 / 250 ( 9 % )
+Total virtual pins : 0
+Total memory bits : 128 / 387,072 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 48 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 1 ( 0 % )

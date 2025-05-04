@@ -1,0 +1,71 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# do main_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/ProjectsVerilog/FIFO/src {D:/ProjectsVerilog/FIFO/src/fifo_sync.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:54:12 on May 05,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/ProjectsVerilog/FIFO/src" D:/ProjectsVerilog/FIFO/src/fifo_sync.v 
+# -- Compiling module fifo_sync
+# 
+# Top level modules:
+# 	fifo_sync
+# End time: 01:54:12 on May 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:54:19 on May 05,2025
+# vlog -reportprogress 300 ../../src/fifo_sync.v 
+# -- Compiling module fifo_sync
+# 
+# Top level modules:
+# 	fifo_sync
+# End time: 01:54:19 on May 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:54:20 on May 05,2025
+# vlog -reportprogress 300 ../../src/fifo_sync_tb.v 
+# -- Compiling module fifo_sync_tb
+# 
+# Top level modules:
+# 	fifo_sync_tb
+# End time: 01:54:20 on May 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.fifo_sync_tb 
+# Start time: 01:54:20 on May 05,2025
+# Loading work.fifo_sync_tb
+# Loading work.fifo_sync
+# OK: Read 10 is expected at time 336000
+# OK: Read 11 is expected at time 356000
+# OK: Read 12 is expected at time 376000
+# OK: Read 13 is expected at time 396000
+# OK: Read 14 is expected at time 416000
+# OK: Read 15 is expected at time 436000
+# OK: Read 16 is expected at time 456000
+# OK: Read 17 is expected at time 476000
+# OK: Read 18 is expected at time 496000
+# OK: Read 19 is expected at time 516000
+# OK: Read 1a is expected at time 536000
+# OK: Read 1b is expected at time 556000
+# OK: Read 1c is expected at time 576000
+# OK: Read 1d is expected at time 596000
+# OK: Read 1e is expected at time 616000
+# ===== SIMULATION PASSED SUCCESSFULLY =====
+# ** Note: $stop    : ../../src/fifo_sync_tb.v(100)
+#    Time: 636 ns  Iteration: 0  Instance: /fifo_sync_tb
+# Break in Module fifo_sync_tb at ../../src/fifo_sync_tb.v line 100
+# End time: 01:54:51 on May 05,2025, Elapsed time: 0:00:31
+# Errors: 0, Warnings: 0

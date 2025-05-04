@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Mon May 05 01:59:58 2025
+Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+Revision Name : main
+Top-level Entity Name : fifo_sync
+Family : MAX 10
+Total logic elements : 48
+    Total combinational functions : 32
+    Dedicated logic registers : 33
+Total registers : 33
+Total pins : 22
+Total virtual pins : 0
+Total memory bits : 128
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

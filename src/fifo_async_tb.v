@@ -1,0 +1,113 @@
+`timescale 1ns/1ps
+
+module fifo_async_tb;
+
+	localparam DATA_WIDTH = 8;
+	localparam MEM_DEPTH  = 16;
+
+	reg			wr_clk = 0;
+	reg			rd_clk = 0;
+	reg			wr_rst = 1;
+	reg			rd_rst = 1;
+
+	reg			wr_en  = 0;
+	reg			rd_en  = 0;
+	
+	reg	[7:0]	din    = 0;
+	wire	[7:0]	dout;
+
+	wire			full;
+	wire			empty;
+
+	fifo_async #(
+		.DATA_WIDTH(DATA_WIDTH),
+		.MEM_DEPTH(MEM_DEPTH)
+	) fifo_async_0 (
+		.wr_clk(wr_clk),
+		.wr_rst(wr_rst),
+		.wr_en(wr_en),
+		.din(din),
+		.full(full),
+
+		.rd_clk(rd_clk),
+		.rd_rst(rd_rst),
+		.rd_en(rd_en),
+		.dout(dout),
+		.empty(empty)
+	);
+
+	// --- Write-clock generator (100 MHz)
+	always begin
+		#5 wr_clk = ~wr_clk;
+	end
+
+	// --- Read-clock generator (~71 MHz)
+	always begin
+		#7 rd_clk = ~rd_clk;
+	end
+
+	// --- Task to write data
+	task write_fifo(input [DATA_WIDTH-1:0] data_in);
+	begin
+		if (!full) begin
+			@(posedge wr_clk);
+			din = data_in;
+			wr_en = 1;
+			@(posedge wr_clk);
+			wr_en = 0;
+			din = 0;
+		end
+		else begin
+			$display("Warning: FIFO is full at time %0t", $time);
+		end
+	end
+	endtask
+
+	// --- Task to read data
+	task read_fifo(output [DATA_WIDTH-1:0] data_out, input [DATA_WIDTH-1:0] expected);
+	begin
+		if (!empty) begin
+			@(posedge rd_clk);
+			rd_en = 1;
+			@(posedge rd_clk);
+			rd_en = 0;
+			#1
+			data_out = dout;
+
+			if (data_out !== expected) begin
+				$display("ERROR: Read %h, but expected %h at time %0t", data_out, expected, $time);
+				$fatal;
+			end else begin
+				$display("OK: Read %h is expected at time %0t", data_out, $time);
+			end
+		end
+		else begin
+			$display("Warning: FIFO is empty at time %0t", $time);
+		end
+	end
+	endtask
+
+	// --- Stimulus
+	integer i;
+	reg [7:0] data_read;
+	initial begin
+
+		// Resets for a short time
+		#20 wr_rst = 0;
+		#20 rd_rst = 0;
+
+		// Write MEM_DEPTH-1 bytes
+		for (i = 0; i < MEM_DEPTH-1; i = i + 1) begin
+			write_fifo(8'h10 + i);
+		end
+
+		// Read the same data
+		for (i = 0; i < MEM_DEPTH-1; i = i + 1) begin
+			read_fifo(data_read, 8'h10 + i);
+		end
+
+		$display("===== ASYNC FIFO SIMULATION PASSED SUCCESSFULLY =====");
+		#20 $stop;
+	end
+
+endmodule

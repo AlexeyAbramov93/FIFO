@@ -4,6 +4,10 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "full",
+					"strict" : false
+				},
+				{
 					"name" : "dout[0]",
 					"strict" : false
 				},
@@ -36,19 +40,23 @@
 					"strict" : false
 				},
 				{
-					"name" : "full",
-					"strict" : false
-				},
-				{
 					"name" : "empty",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "wr_rst",
 					"strict" : false
 				},
 				{
-					"name" : "rst",
+					"name" : "wr_clk",
+					"strict" : false
+				},
+				{
+					"name" : "wr_en",
+					"strict" : false
+				},
+				{
+					"name" : "rd_clk",
 					"strict" : false
 				},
 				{
@@ -56,7 +64,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "wr_en",
+					"name" : "rd_rst",
 					"strict" : false
 				},
 				{

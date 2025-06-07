@@ -80,18 +80,20 @@ module fifo_sync_tb;
 	end
 	endtask
 
+	// --- Stimulus
 	integer i;
 	reg [7:0] data_read;
 	initial begin
 
+		// Reset for a short time
 		#20 rst=0;
 		
-		
+		// Write MEM_DEPTH-1 bytes
 		for (i=0; i<MEM_DEPTH-1; i=i+1) begin
 			write_fifo(8'h10 + i);
 		end
 		
-		
+		// Read the same data
 		for (i=0; i<MEM_DEPTH-1; i=i+1) begin
 			read_fifo(data_read, 8'h10 + i);
 		end

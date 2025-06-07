@@ -8,18 +8,58 @@ z2
 !i10f 100
 cModel Technology
 Z0 dD:/ProjectsVerilog/FIFO/simulation/modelsim
+vfifo_async
+Z1 !s110 1749333832
+!i10b 1
+!s100 mz>6NjOezk3[U42T0eCad1
+IM^XKn2V[De4;g`?VJZ6Pc2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1747692063
+8../../src/fifo_async.v
+F../../src/fifo_async.v
+L0 4
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1749333832.000000
+!s107 ../../src/fifo_async.v|
+!s90 -reportprogress|300|../../src/fifo_async.v|
+!i113 1
+Z5 tCvgOpt 0
+vfifo_async_tb
+R1
+!i10b 1
+!s100 [od_DC;Qf22EUe[90dd752
+IDIlj<SYGZ3Blk37WAP5R21
+R2
+R0
+w1747690959
+8../../src/fifo_async_tb.v
+F../../src/fifo_async_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 ../../src/fifo_async_tb.v|
+!s90 -reportprogress|300|../../src/fifo_async_tb.v|
+!i113 1
+R5
 vfifo_sync
 !s110 1746399259
 !i10b 1
 !s100 P0BMNbBk4>ze]UceIIVKl0
 IBl_eL`ZoeUoe@763PXHg42
-Z1 VDg1SIo80bB@j0V0VzS_@n1
+R2
 R0
 w1746315283
 8../../src/fifo_sync.v
 F../../src/fifo_sync.v
 L0 1
-Z2 OV;L;10.5b;63
+R3
 r1
 !s85 0
 31
@@ -27,19 +67,19 @@ r1
 !s107 ../../src/fifo_sync.v|
 !s90 -reportprogress|300|../../src/fifo_sync.v|
 !i113 1
-Z3 tCvgOpt 0
+R5
 vfifo_sync_tb
 !s110 1746399260
 !i10b 1
 !s100 gmU>aMVB2@1f<YdzL8LB@2
 IDf?[oN1b]3eoaM0@8RHfb3
-R1
+R2
 R0
 w1746396437
 8../../src/fifo_sync_tb.v
 F../../src/fifo_sync_tb.v
 L0 3
-R2
+R3
 r1
 !s85 0
 31
@@ -47,4 +87,4 @@ r1
 !s107 ../../src/fifo_sync_tb.v|
 !s90 -reportprogress|300|../../src/fifo_sync_tb.v|
 !i113 1
-R3
+R5

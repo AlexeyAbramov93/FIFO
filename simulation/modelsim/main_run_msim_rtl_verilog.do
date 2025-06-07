@@ -5,5 +5,5 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -vlog01compat -work work +incdir+D:/ProjectsVerilog/FIFO/src {D:/ProjectsVerilog/FIFO/src/fifo_sync.v}
+vlog -vlog01compat -work work +incdir+D:/ProjectsVerilog/FIFO/src {D:/ProjectsVerilog/FIFO/src/fifo_async.v}
 
